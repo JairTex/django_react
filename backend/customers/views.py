@@ -1,8 +1,8 @@
 from rest_framework import mixins, generics, permissions
-from .models import Custumer
-from .serializers import CustumerSerializer
+from .models import Customer
+from .serializers import CustomerSerializer
 
-class CustumerListAPIView(generics.ListAPIView):
-    serializer_class = CustumerSerializer
+class CustomerListAPIView(generics.ListAPIView):
+    serializer_class = CustomerSerializer
     permission_classes = [permissions.AllowAny]
-    queryset = Custumer.objects.all()
+    queryset = Customer.objects.all()
